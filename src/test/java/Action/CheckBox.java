@@ -1,6 +1,7 @@
 package Action;
 
 
+import Tools.FindLocator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +18,10 @@ public class CheckBox {
     }
 
 
-    public void Check(By locator) {
+    public void check(String strLocator) {
+
+        FindLocator findLocator = new FindLocator(driver);
+        By locator = findLocator.to(strLocator);
 
             WebElement checkBoxSelected = driver.findElement(locator);
             WebElement checkBoxDisplayed = driver.findElement(locator);
@@ -33,9 +37,10 @@ public class CheckBox {
 
 
 
-    public void UnCheck (By locator) {
+    public void unCheck (String strLocator) {
 
-
+        FindLocator findLocator = new FindLocator(driver);
+        By locator = findLocator.to(strLocator);
 
             WebElement checkBoxSelected = driver.findElement(locator);
             WebElement checkBoxDisplayed = driver.findElement(locator);

@@ -1,28 +1,26 @@
 package Config;
 
 
-import Action.Choose;
-import Action.Click;
-import Action.Keyboard;
-import Action.Write;
+import Action.*;
 import Tools.FindLocator;
-
-import Tools.logs.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 
 
 public abstract class BaseTest {
 
     public WebDriver driver;
+    public Click click;
+    public Write write;
+    public CheckBox checkBox;
+    public Choose choose;
+    public Keyboard keyboard;
+    public FindLocator findLocator;
+    public LinkStatus linkStatus;
 
     public WebDriver getDriver() {
         return driver;
@@ -31,14 +29,6 @@ public abstract class BaseTest {
     public void setDriver(WebDriver newDriver) {
         driver = newDriver;
     }
-    public Click click;
-    public Write write;
-
-    public Choose choose;
-    public Keyboard keyboard;
-
-    public FindLocator findLocator;
-
 
     @BeforeSuite
     public void beforeAll() throws AWTException {
@@ -50,9 +40,11 @@ public abstract class BaseTest {
 //        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         click = new Click(driver);
         write = new Write(driver);
+        checkBox = new CheckBox(driver);
         choose = new Choose(driver);
         findLocator = new FindLocator(driver);
         keyboard = new Keyboard();
+        linkStatus = new LinkStatus(driver);
 
     }
 

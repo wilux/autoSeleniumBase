@@ -14,8 +14,8 @@ public class NuevoTest extends BaseTest{
         //Go To
         driver.get("https://www.compraypunto.com.ar/");
 
-        write.on("txtUsuario", "nestorchoele@gmail.com");
-        write.on("txtClave", "cogito78");
+        write.on("txtUsuario", "");
+        write.on("txtClave", "");
         click.on("btnLogIn");
         click.on("SALIR");
 

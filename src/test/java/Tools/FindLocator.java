@@ -38,7 +38,7 @@ public class FindLocator {
                 valor = By.id(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.id");
+//                System.out.println("Not found " + locator + " By.id");
 
             }
 
@@ -47,7 +47,7 @@ public class FindLocator {
                 valor = By.name(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.name");
+//                System.out.println("Not found " + locator + " By.name");
             }
 
             try {
@@ -55,7 +55,7 @@ public class FindLocator {
                 valor = By.cssSelector(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.cssSelector");
+//                System.out.println("Not found " + locator + " By.cssSelector");
             }
 
             try {
@@ -63,7 +63,7 @@ public class FindLocator {
                 valor = By.xpath(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.xpath");
+//                System.out.println("Not found " + locator + " By.xpath");
             }
 
             try {
@@ -71,7 +71,7 @@ public class FindLocator {
                 valor = By.linkText(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.linkText");
+//                System.out.println("Not found " + locator + " By.linkText");
             }
 
             try {
@@ -79,7 +79,7 @@ public class FindLocator {
                 valor = By.partialLinkText(locator);
                 break;
             } catch (Exception e) {
-                System.out.println("Not found " + locator + " By.partialLinkText");
+//                System.out.println("Not found " + locator + " By.partialLinkText");
             }
         }
 

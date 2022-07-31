@@ -27,7 +27,7 @@ public class Write {
     }
 
     public void on(String strLocator, String text) throws InterruptedException, AWTException {
-        Click click = new Click(driver);
+//        Click click = new Click(driver);
         Thread.sleep(200);
         FindLocator findLocator = new FindLocator(driver);
 
@@ -58,7 +58,7 @@ public class Write {
             System.out.println("No se encontró " + locator + " y no se puede continuar prueba.");
         } else {
             Thread.sleep(200);
-            click.on("input");
+//            click.on("input");
         }
 
     }

@@ -22,6 +22,10 @@ public abstract class BaseTest {
     public FindLocator findLocator;
     public LinkStatus linkStatus;
 
+    public Get get;
+
+    public DragDrop dragDrop;
+
     public WebDriver getDriver() {
         return driver;
     }
@@ -35,9 +39,9 @@ public abstract class BaseTest {
         System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.setHeadless(true);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         click = new Click(driver);
         write = new Write(driver);
         checkBox = new CheckBox(driver);
@@ -45,6 +49,8 @@ public abstract class BaseTest {
         findLocator = new FindLocator(driver);
         keyboard = new Keyboard();
         linkStatus = new LinkStatus(driver);
+        dragDrop = new DragDrop(driver);
+        get = new Get(driver);
 
     }
 

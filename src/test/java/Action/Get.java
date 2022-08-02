@@ -1,5 +1,6 @@
 package Action;
 
+import Tools.FindLocator;
 import com.google.common.base.Stopwatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,18 +18,20 @@ public class Get {
 
     }
 
-    public String ValueOnInput(By locator) {
+    public String valueOnInput(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
+
+        By locator = findLocator.to(strLocator);
+
         String value = "";
 
-
         try {
-            if (  driver.findElement ( locator ).isDisplayed()) {
-                value = driver.findElement ( locator ).getAttribute ( "value" );
+            if (driver.findElement(locator).isDisplayed()) {
+                value = driver.findElement(locator).getAttribute("value");
 
-            }
-            else {
+            } else {
                 value = "";
-                System.out.println ( "No se encontró " + locator );
+                System.out.println("No se encontró " + locator);
             }
 
         } catch (Exception e) {
@@ -38,90 +41,96 @@ public class Get {
         return value;
     }
 
-    public String TextOnTag(By locator) {
+    public String textOnTag(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
+
+        By locator = findLocator.to(strLocator);
+
         String value = "";
 
-        final Stopwatch stopwatch = Stopwatch.createStarted ();
+        final Stopwatch stopwatch = Stopwatch.createStarted();
 
-        while ((stopwatch.elapsed ( TimeUnit.SECONDS ) < 10)) {
-            if (  driver.findElement ( locator ).isDisplayed()) {
-                value = driver.findElement ( locator ).getText ();
+        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
+            if (driver.findElement(locator).isDisplayed()) {
+                value = driver.findElement(locator).getText();
                 break;
-            }
-            else {
-                System.out.println ( "No se encontró " + locator );
+            } else {
+                System.out.println("No se encontró " + locator);
                 continue;
             }
         }
+        System.out.println(value);
         return value;
     }
 
-    public String ValueJS(By locator, String id) {
+    public String valueJS(String strLocator, String id) {
+        FindLocator findLocator = new FindLocator(driver);
+
+        By locator = findLocator.to(strLocator);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String value = "";
 
 
-        if (  driver.findElement ( locator ).isDisplayed()) {
-            value = (String) js.executeScript ( "return document.getElementById('" + id + "').innerHTML" );
-        }
-        else {
-            System.out.println ( "No se encontró " + locator );
-        }
-        return value;
-    }
-
-    public boolean Visible(By locator) {
-
-
-        boolean value = false;
-        if (  driver.findElement ( locator ).isDisplayed()) {
-            value = driver.findElement ( locator ).isDisplayed ();
-
-        }
-        else {
-            System.out.println ( "No se encontró " + locator );
+        if (driver.findElement(locator).isDisplayed()) {
+            value = (String) js.executeScript("return document.getElementById('" + id + "').innerHTML");
+        } else {
+            System.out.println("No se encontró " + locator);
         }
         return value;
     }
 
-    public boolean Seleccionado(By locator) {
+    public boolean visible(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
 
-
+        By locator = findLocator.to(strLocator);
         boolean value = false;
-        if (  driver.findElement ( locator ).isDisplayed()) {
-            value = driver.findElement ( locator ).isSelected ();
+        if (driver.findElement(locator).isDisplayed()) {
+            value = driver.findElement(locator).isDisplayed();
 
-        }
-        else {
-            System.out.println ( "No se encontró " + locator );
+        } else {
+            System.out.println("No se encontró " + locator);
         }
         return value;
     }
 
-    public boolean Habilitado(By locator) {
+    public boolean seleccionado(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
 
-
+        By locator = findLocator.to(strLocator);
         boolean value = false;
-        if ( driver.findElement ( locator ).isDisplayed()) {
-            value = driver.findElement ( locator ).isEnabled ();
+        if (driver.findElement(locator).isDisplayed()) {
+            value = driver.findElement(locator).isSelected();
 
+        } else {
+            System.out.println("No se encontró " + locator);
         }
-        else {
-            System.out.println ( "No se encontró " + locator );
+        return value;
+    }
+
+    public boolean habilitado(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
+
+        By locator = findLocator.to(strLocator);
+        boolean value = false;
+        if (driver.findElement(locator).isDisplayed()) {
+            value = driver.findElement(locator).isEnabled();
+
+        } else {
+            System.out.println("No se encontró " + locator);
         }
         return value;
     }
 
 
-    public boolean Existe(By locator) {
+    public boolean existe(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
 
-
+        By locator = findLocator.to(strLocator);
         boolean value = false;
-        if ( driver.findElement ( locator ).isDisplayed()) {
+        if (driver.findElement(locator).isDisplayed()) {
             value = true;
-        }
-        else {
-            System.out.println ( "No se encontró " + locator );
+        } else {
+            System.out.println("No se encontró " + locator);
         }
         return value;
     }

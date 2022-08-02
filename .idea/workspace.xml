@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="fix write">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Action/LinkStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/CheckBoxesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/ImageCheckTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" afterDir="false" />
+    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="add test examples">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Action/DragDrop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/ChooseDropdownTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/DragAndDropTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Choose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Choose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Get.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Get.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +59,12 @@
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="TestCase" />
       <recent name="Action" />
+      <recent name="TestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LinkCheckTest.LinkBrokenTest">
-    <configuration name="AddRemoveElementTest.CheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DragAndDropTest.dragAndDropTest">
+    <configuration name="ChooseDropdownTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -74,8 +73,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.AddRemoveElementTest" />
-      <option name="METHOD_NAME" value="CheckTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.ChooseDropdownTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChooseDropdownTest.LinkBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="autoSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCase" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.ChooseDropdownTest" />
+      <option name="METHOD_NAME" value="LinkBrokenTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -83,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckBoxesTest.BpnPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -92,16 +108,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.CheckBoxesTest" />
-      <option name="METHOD_NAME" value="BpnPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.DragAndDropTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageCheckTest.ImagesBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DragAndDropTest.dragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +125,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.ImageCheckTest" />
-      <option name="METHOD_NAME" value="ImagesBrokenTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.DragAndDropTest" />
+      <option name="METHOD_NAME" value="dragAndDropTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -137,31 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NuevoTest.BpnPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="autoSelenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.NuevoTest" />
-      <option name="METHOD_NAME" value="BpnPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DragAndDropTest.dragAndDropTest" />
+        <item itemvalue="TestNG.DragAndDropTest" />
+        <item itemvalue="TestNG.ChooseDropdownTest" />
+        <item itemvalue="TestNG.ChooseDropdownTest.LinkBrokenTest" />
         <item itemvalue="TestNG.LinkCheckTest.LinkBrokenTest" />
-        <item itemvalue="TestNG.ImageCheckTest.ImagesBrokenTest" />
-        <item itemvalue="TestNG.AddRemoveElementTest.CheckTest" />
-        <item itemvalue="TestNG.CheckBoxesTest.BpnPageTest" />
-        <item itemvalue="TestNG.NuevoTest.BpnPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659306042647</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add test examples">
+      <created>1659308703126</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659308703126</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +217,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="fix write" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix write" />
+    <MESSAGE value="add test examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test examples" />
   </component>
 </project>

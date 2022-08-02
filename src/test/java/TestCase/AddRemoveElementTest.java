@@ -10,7 +10,7 @@ public class AddRemoveElementTest extends BaseTest {
 
 
     @Test
-    public void CheckTest() throws InterruptedException, AWTException {
+    public void addRemoveTest() throws InterruptedException, AWTException {
 
         //Go To
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");

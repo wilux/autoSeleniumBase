@@ -81,14 +81,18 @@ public class Get {
 
     public boolean visible(String strLocator) {
         FindLocator findLocator = new FindLocator(driver);
-
+        final Stopwatch stopwatch = Stopwatch.createStarted();
         By locator = findLocator.to(strLocator);
         boolean value = false;
-        if (driver.findElement(locator).isDisplayed()) {
-            value = driver.findElement(locator).isDisplayed();
+        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
+            if (driver.findElement(locator).isDisplayed()) {
+                value = driver.findElement(locator).isDisplayed();
+                break;
 
-        } else {
-            System.out.println("No se encontró " + locator);
+            } else {
+                System.out.println("No se encontró " + locator);
+                continue;
+            }
         }
         return value;
     }

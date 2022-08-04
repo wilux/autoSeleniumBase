@@ -9,6 +9,7 @@ import java.awt.event.KeyEvent;
 
 public class Keyboard {
 
+    WebDriver driver;
     private Robot robot;
 
 
@@ -23,6 +24,10 @@ public class Keyboard {
         this.robot = robot;
     }
 
+    public Keyboard(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void type(CharSequence characters) throws InterruptedException {
         int length = characters.length();
         for (int i = 0; i < length; i++) {
@@ -31,9 +36,14 @@ public class Keyboard {
         }
     }
 
-    public void enter(WebDriver driver) {
+    public void enter() {
         Actions builder = new Actions(driver);
         builder.sendKeys(Keys.RETURN).perform();
+    }
+
+    public void tab() {
+        Actions builder = new Actions(driver);
+        builder.sendKeys(Keys.TAB).perform();
     }
 
 

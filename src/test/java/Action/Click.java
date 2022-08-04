@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Click {
     WebDriver driver;
-    int seconds = 20;
+    int seconds = 5;
 
 
     public Click(WebDriver driver) {

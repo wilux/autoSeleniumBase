@@ -47,7 +47,7 @@ public abstract class BaseTest {
         checkBox = new CheckBox(driver);
         choose = new Choose(driver);
         findLocator = new FindLocator(driver);
-        keyboard = new Keyboard();
+        keyboard = new Keyboard(driver);
         linkStatus = new LinkStatus(driver);
         dragDrop = new DragDrop(driver);
         get = new Get(driver);

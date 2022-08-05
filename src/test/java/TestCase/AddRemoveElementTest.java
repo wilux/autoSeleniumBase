@@ -15,10 +15,10 @@ public class AddRemoveElementTest extends BaseTest {
         //Go To
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
         for (int i = 0; i < 4; i++) {
-            click.on("//button[text()='Add Element']");
+            actions.click().on("//button[text()='Add Element']");
         }
         for (int i = 0; i < 4; i++) {
-            click.on("//button[text()='Delete']");
+            actions.click().on("//button[text()='Delete']");
         }
 
     }

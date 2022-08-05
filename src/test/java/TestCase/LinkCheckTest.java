@@ -15,10 +15,8 @@ public class LinkCheckTest extends BaseTest {
         driver.get("https://the-internet.herokuapp.com/broken_images");
 
         //No Broken
-        Assert.assertTrue(linkStatus.verifyUrlActive("Elemental Selenium"));
+        Assert.assertTrue(actions.linkStatus().verifyUrlActive("//a[.='Elemental Selenium']"));
 
-        //Broken
-        Assert.assertTrue(!linkStatus.verifyUrlActive("Elemental Selenium"));
 
     }
 

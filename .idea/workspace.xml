@@ -4,23 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="add most test examples">
-      <change afterPath="$PROJECT_DIR$/log4j2-sample-2022-07-31.log" afterDir="false" />
+    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="fix structure">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Action/Wait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Config/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestReport/Test-Automaton-Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestReport/Test-Automaton-Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log4j2/log4j2-test-automation.log" beforeDir="false" afterPath="$PROJECT_DIR$/log4j2/log4j2-test-automation.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Click.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Click.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Get.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Get.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Keyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Write.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/CheckBoxesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/CheckBoxesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/ChooseDropdownTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/ChooseDropdownTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/DragAndDropTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/DragAndDropTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/ImageCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/ImageCheckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/NuevoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/NuevoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="FormatOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -64,23 +71,34 @@
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium" />
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Action" />
       <recent name="TestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NuevoTest">
-    <configuration name="C:/Users/nesto/IdeaProjects/AutoSelenium/autoSelenium/src/test/java/TestCase/NuevoTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CheckBoxesTest.CheckTest">
+    <configuration name="CheckBoxesTest.CheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/TestCase/NuevoTest.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCase" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.CheckBoxesTest" />
+      <option name="METHOD_NAME" value="CheckTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DragAndDropTest.dragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -90,24 +108,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
       <option name="MAIN_CLASS_NAME" value="TestCase.DragAndDropTest" />
-      <option name="METHOD_NAME" value="dragAndDropTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NuevoTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="autoSelenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.NuevoTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -115,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NuevoTest.BpnPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ImageCheckTest.ImagesBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.NuevoTest" />
-      <option name="METHOD_NAME" value="BpnPageTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.ImageCheckTest" />
+      <option name="METHOD_NAME" value="ImagesBrokenTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -133,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NuevoTest.chargeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkCheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +142,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.NuevoTest" />
-      <option name="METHOD_NAME" value="chargeTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.LinkCheckTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkCheckTest.LinkBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="autoSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCase" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.LinkCheckTest" />
+      <option name="METHOD_NAME" value="LinkBrokenTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.NuevoTest" />
-        <item itemvalue="TestNG.C:/Users/nesto/IdeaProjects/AutoSelenium/autoSelenium/src/test/java/TestCase/NuevoTest.xml" />
-        <item itemvalue="TestNG.NuevoTest.chargeTest" />
-        <item itemvalue="TestNG.NuevoTest.BpnPageTest" />
-        <item itemvalue="TestNG.DragAndDropTest.dragAndDropTest" />
+        <item itemvalue="TestNG.CheckBoxesTest.CheckTest" />
+        <item itemvalue="TestNG.DragAndDropTest" />
+        <item itemvalue="TestNG.ImageCheckTest.ImagesBrokenTest" />
+        <item itemvalue="TestNG.LinkCheckTest.LinkBrokenTest" />
+        <item itemvalue="TestNG.LinkCheckTest" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659400540436</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix structure">
+      <created>1659651835225</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1659651835225</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,21 +249,7 @@
     <MESSAGE value="fix write" />
     <MESSAGE value="add test examples" />
     <MESSAGE value="add most test examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="add most test examples" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Action/Click.java</url>
-          <line>22</line>
-          <properties class="Action.Click" method="on">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix structure" />
   </component>
 </project>

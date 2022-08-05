@@ -14,8 +14,8 @@ public class CheckBoxesTest extends BaseTest {
 
         //Go To
         driver.get("https://the-internet.herokuapp.com/checkboxes");
-        checkBox.check("//*[@id=\"checkboxes\"]/input[1]");
-        checkBox.unCheck("//*[@id=\"checkboxes\"]/input[2]");
+        actions.checkBox().check("//*[@id=\"checkboxes\"]/input[1]");
+        actions.checkBox().unCheck("//*[@id=\"checkboxes\"]/input[2]");
 
     }
 

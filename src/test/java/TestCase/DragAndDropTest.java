@@ -13,7 +13,7 @@ public class DragAndDropTest extends BaseTest {
         //Go To
         driver.get("https://the-internet.herokuapp.com/drag_and_drop");
 
-        dragDrop.fromAtoBjs("column-a", "column-b");
+        actions.dragDrop().fromAtoBjs("column-a", "column-b");
 
     }
 

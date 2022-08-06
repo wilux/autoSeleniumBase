@@ -58,4 +58,9 @@ public class Actions {
         return get;
     }
 
+    public Wait waitFor() {
+        Wait wait = new Wait(driver);
+        return wait;
+    }
+
 }

@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="fix structure">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Action/Wait.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Config/Actions.java" afterDir="false" />
+    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="add actions class to simplify call methods">
+      <change afterPath="$PROJECT_DIR$/audio/audio.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/audio.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audio/demo.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/ApiRestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/RecaptchaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webdriver/audio.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Config/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/Actions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/AddRemoveElementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/CheckBoxesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/CheckBoxesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/ChooseDropdownTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/ChooseDropdownTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/DragAndDropTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/DragAndDropTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/ImageCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/ImageCheckTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/NuevoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/NuevoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/extent.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,26 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nesto/IdeaProjects/AutoSelenium/autoSelenium/src/test/java/TestCase&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/nesto/IdeaProjects/AutoSelenium/autoSelenium",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test\java\TestCase" />
-      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test\java\Tools" />
-      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test\resources" />
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium" />
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test" />
+      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\webdriver" />
+      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test\java\Tools" />
+      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\src\test\java\TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium\webdriver" />
       <recent name="C:\Users\nesto\IdeaProjects\AutoSelenium\autoSelenium" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -79,7 +82,38 @@
       <recent name="TestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CheckBoxesTest.CheckTest">
+  <component name="RunManager" selected="TestNG.ApiRestTest.fileUploadTest">
+    <configuration name="DecoderDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tools.DecoderDemo" />
+      <module name="autoSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiRestTest.fileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="autoSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCase" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.ApiRestTest" />
+      <option name="METHOD_NAME" value="fileUploadTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CheckBoxesTest.CheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
@@ -98,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DragAndDropTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecaptchaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -107,7 +141,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.DragAndDropTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.RecaptchaTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -115,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageCheckTest.ImagesBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecaptchaTest.selectCorrectimg" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -124,43 +158,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.ImageCheckTest" />
-      <option name="METHOD_NAME" value="ImagesBrokenTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkCheckTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="autoSelenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.LinkCheckTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LinkCheckTest.LinkBrokenTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="autoSelenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCase.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.LinkCheckTest" />
-      <option name="METHOD_NAME" value="LinkBrokenTest" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.RecaptchaTest" />
+      <option name="METHOD_NAME" value="selectCorrectimg" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -170,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ApiRestTest.fileUploadTest" />
+        <item itemvalue="Application.DecoderDemo" />
+        <item itemvalue="TestNG.RecaptchaTest.selectCorrectimg" />
+        <item itemvalue="TestNG.RecaptchaTest" />
         <item itemvalue="TestNG.CheckBoxesTest.CheckTest" />
-        <item itemvalue="TestNG.DragAndDropTest" />
-        <item itemvalue="TestNG.ImageCheckTest.ImagesBrokenTest" />
-        <item itemvalue="TestNG.LinkCheckTest.LinkBrokenTest" />
-        <item itemvalue="TestNG.LinkCheckTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659651835225</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add actions class to simplify call methods">
+      <created>1659663532048</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1659663532048</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +256,7 @@
     <MESSAGE value="add test examples" />
     <MESSAGE value="add most test examples" />
     <MESSAGE value="fix structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix structure" />
+    <MESSAGE value="add actions class to simplify call methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add actions class to simplify call methods" />
   </component>
 </project>

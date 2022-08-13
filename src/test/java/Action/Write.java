@@ -27,7 +27,7 @@ public class Write {
         on(strLocator, text);
     }
 
-    public void on(String strLocator, String text) throws InterruptedException, AWTException {
+    public void on(String strLocator, String text) throws InterruptedException {
         Thread.sleep(200);
         FindLocator findLocator = new FindLocator(driver);
 

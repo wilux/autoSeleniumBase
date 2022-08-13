@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.function.Function;
 
 public class Wait {
     WebDriver driver;
@@ -77,11 +76,7 @@ public class Wait {
                 .pollingEvery(Duration.ofSeconds(timeEvery))
                 .ignoring(NoSuchElementException.class);
 
-        WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
-            public WebElement apply(WebDriver driver) {
-                return driver.findElement(locator);
-            }
-        });
+        WebElement foo = wait.until(driver -> driver.findElement(locator));
 
         return foo;
     }

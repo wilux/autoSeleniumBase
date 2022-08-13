@@ -41,6 +41,29 @@ public class Get {
         return value;
     }
 
+    public String Url(String strLocator) {
+        FindLocator findLocator = new FindLocator(driver);
+
+        By locator = findLocator.to(strLocator);
+
+        String value = "";
+
+        try {
+            if (driver.findElement(locator).isDisplayed()) {
+                value = driver.findElement(locator).getAttribute("href");
+
+            } else {
+                value = "";
+                System.out.println("No se encontró " + locator);
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return value;
+    }
+
     public String textOnTag(String strLocator) {
         FindLocator findLocator = new FindLocator(driver);
 

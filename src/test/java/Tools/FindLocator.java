@@ -1,14 +1,14 @@
 package Tools;
 
-import com.google.common.base.Stopwatch;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+
 
 public class FindLocator {
     WebDriver driver;
-    int seconds = 20;
 
     public FindLocator(WebDriver driver) {
 
@@ -16,73 +16,55 @@ public class FindLocator {
 
     }
 
-    public FindLocator(WebDriver driver, int seconds) {
-
-        this.driver = driver;
-        this.seconds = seconds;
-
-    }
-
 
     public By to(String locator) {
 
         By valor = null;
+        Frame frame = new Frame(driver);
+        ArrayList<By> x = new ArrayList();
+        x.add(By.id(locator));
+        x.add(By.name(locator));
+        x.add(By.cssSelector(locator));
+        x.add(By.xpath(locator));
+        x.add(By.linkText(locator));
+        x.add(By.partialLinkText(locator));
 
-        final Stopwatch stopwatch = Stopwatch.createStarted();
 
-
-        while ((stopwatch.elapsed(TimeUnit.SECONDS) < seconds)) {
+        for (int i = 0; i < x.size(); i++) {
 
             try {
-                driver.findElement(By.id(locator)).isDisplayed();
-                valor = By.id(locator);
+                driver.findElement(x.get(i)).isDisplayed();
+                valor = x.get(i);
                 break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.id");
 
+            } catch (Exception e) {
+                continue;
             }
 
-            try {
-                driver.findElement(By.name(locator)).isDisplayed();
-                valor = By.name(locator);
-                break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.name");
-            }
+        }
 
-            try {
-                driver.findElement(By.cssSelector(locator)).isDisplayed();
-                valor = By.cssSelector(locator);
-                break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.cssSelector");
-            }
+        System.out.println("valor despues primer for -> " + valor);
 
-            try {
-                driver.findElement(By.xpath(locator)).isDisplayed();
-                valor = By.xpath(locator);
-                break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.xpath");
-            }
+        if (valor == null) {
+            System.out.println("Buscando en Frame -> " + locator);
+            for (int i = 0; i < x.size(); i++) {
 
-            try {
-                driver.findElement(By.linkText(locator)).isDisplayed();
-                valor = By.linkText(locator);
-                break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.linkText");
-            }
+                try {
+                    if (frame.BuscarFrame(x.get(i))) {
+                        System.out.println("Encontre en Frame -> " + x.get(i));
+                        driver.findElement(x.get(i)).isDisplayed();
+                        valor = x.get(i);
+                        break;
+                    }
 
-            try {
-                driver.findElement(By.partialLinkText(locator)).isDisplayed();
-                valor = By.partialLinkText(locator);
-                break;
-            } catch (Exception e) {
-//                System.out.println("Not found " + locator + " By.partialLinkText");
+                } catch (Exception e) {
+                    continue;
+
+                }
             }
         }
 
+        System.out.println("valor encontrado -> " + valor);
         return valor;
     }
 }

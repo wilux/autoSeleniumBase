@@ -61,10 +61,10 @@ public class FindLocator {
 
             try {
 
-                driver.findElement(x.get(i)).isDisplayed();
-                valor = x.get(i);
-
-                break;
+                if (driver.findElement(x.get(i)).isDisplayed() && driver.findElement(x.get(i)).isEnabled()) {
+                    valor = x.get(i);
+                    break;
+                }
 
             } catch (Exception e) {
                 continue;
@@ -74,16 +74,16 @@ public class FindLocator {
 
 //        System.out.println("valor despues primer for -> " + valor);
 
-        if (valor == null) {
-            System.out.println("Valor: " + valor + "entonces buscando en algun iframe el locator " + locator);
+        if (valor == null) {  // Si no encontro sigue buiscando en los posibles frames
+            System.out.println("Valor: " + valor + " entonces buscando en algun iframe el locator " + locator);
             for (int i = 0; i < x.size(); i++) {
 
                 try {
                     if (frame.buscarFrame(x.get(i))) {
-                        System.out.println("Encontre en iframe -> " + x.get(i) + " para valor " + locator);
-                        driver.findElement(x.get(i)).isDisplayed();
+                        System.out.println("Encontre por frame " + locator + " en " + x.get(i));
+//                        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+//                                .until(ExpectedConditions.elementToBeClickable(x.get(i)));
                         valor = x.get(i);
-
                         break;
                     }
 

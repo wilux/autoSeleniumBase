@@ -1,7 +1,6 @@
 package TestCase;
 
 import Config.ActionsImp;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,11 +39,15 @@ public class ExampleTest extends ActionsImp {
 
 
     @Test(priority = 2, dependsOnMethods = "chargeTest")
-    public void paymentTest() {
+    public void paymentTest() throws InterruptedException {
 
         click().on("//p[text()='Tarjeta']");
-        click().on("//span[text()='Usar nueva tarjeta']");
-        click().on("//span[text()='Usar nueva tarjeta']");
+//        Thread.sleep(5000);
+//        click().on("//*[@id='radio-n']/td/label/a");
+        do {
+            click().on("//span[text()='Usar nueva tarjeta']");
+        }
+        while (!get().visible("cardnumberunique"));
         write().on("cardnumberunique", "4111111111111111");
         write().on("//input[attribute::data-qa='mes-input']", "11");
         write().on("//input[attribute::data-qa='expyear-input']", "25");
@@ -63,16 +66,16 @@ public class ExampleTest extends ActionsImp {
         write().on("psw", "automationUDT123");
 
         //frame recapcha
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
+//        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]")));
         click().on("recaptcha-anchor");
-        driver.switchTo().defaultContent();
+//        driver.switchTo().defaultContent();
 
         //Login
         click().on("loginBtn");
 
         //Wait
 
-        new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.urlContains("confirmation/success"));
+        new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.urlContains("confirmation/success"));
 
 
         // Verify if the user gets a success message and recharge gets successful.

@@ -1,6 +1,7 @@
 package Action;
 
 import Tools.FindLocator;
+import Tools.WaitFor;
 import com.google.common.base.Stopwatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -104,20 +105,21 @@ public class Get {
 
     public boolean visible(String strLocator) {
         FindLocator findLocator = new FindLocator(driver);
-        final Stopwatch stopwatch = Stopwatch.createStarted();
         By locator = findLocator.to(strLocator);
-        boolean value = false;
-        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
-            if (driver.findElement(locator).isDisplayed()) {
-                value = driver.findElement(locator).isDisplayed();
-                break;
 
-            } else {
-                System.out.println("No se encontró " + locator);
-                continue;
+
+        WaitFor waitFor = new WaitFor(driver);
+        try {
+
+            if (waitFor.explicitWait(locator, 20).isDisplayed()) {
+                return true;
+
             }
+        } catch (Exception e) {
+            return false;
         }
-        return value;
+
+        return false;
     }
 
     public boolean seleccionado(String strLocator) {

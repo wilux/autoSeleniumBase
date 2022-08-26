@@ -39,11 +39,11 @@ public class Frame {
 
 
     public Boolean buscarFrame(By locator) {
-        Boolean estado = false;
+
 
         System.out.println("Locator en frame " + locator);
         if (findElementIfExists(locator) != null) {
-            estado = true;
+            return true;
         } else {
 
             try {
@@ -56,12 +56,13 @@ public class Frame {
             System.out.println("Cantidad frames: " + sizeInicial);
             for (int i = 0; i < sizeInicial; i++) {
 
-
                 try {
                     driver.switchTo().frame(i);
+//                    System.out.println("Probando " + locator + " en frame " + i);
                     driver.findElement(locator);
-                    estado = true;
-                    break;
+                    System.out.println("Encontre " + locator + " en frame " + i);
+                    return true;
+
                 } catch (Exception e) {
                     driver.switchTo().parentFrame();
                     continue;
@@ -71,7 +72,7 @@ public class Frame {
 
         }
 
-        return estado;
+        return false;
     }
 
 

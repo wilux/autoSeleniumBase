@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 
 
@@ -20,7 +21,7 @@ public class ExampleTest extends ActionsImp {
     }
 
     @Test(priority = 1)
-    public void chargeTest() {
+    public void chargeTest() throws IOException {
 
 
         //Go To
@@ -37,17 +38,14 @@ public class ExampleTest extends ActionsImp {
 
     }
 
-
     @Test(priority = 2, dependsOnMethods = "chargeTest")
-    public void paymentTest() throws InterruptedException {
+    public void paymentTest() throws IOException {
 
         click().on("//p[text()='Tarjeta']");
-//        Thread.sleep(5000);
-//        click().on("//*[@id='radio-n']/td/label/a");
-        do {
-            click().on("//span[text()='Usar nueva tarjeta']");
-        }
-        while (!get().visible("cardnumberunique"));
+
+        click().on("//*[@id='radio-n']/td/label/a");
+
+
         write().on("cardnumberunique", "4111111111111111");
         write().on("//input[attribute::data-qa='mes-input']", "11");
         write().on("//input[attribute::data-qa='expyear-input']", "25");
@@ -60,7 +58,7 @@ public class ExampleTest extends ActionsImp {
     }
 
     @Test(priority = 3, dependsOnMethods = "paymentTest")
-    public void popupRegisterTest() {
+    public void popupRegisterTest() throws IOException {
         //  A popup will appear. Enter the following email automationUDT1@gmail.com and password “automationUDT123”
         write().on("usrname", "automationUDT1@gmail.com");
         write().on("psw", "automationUDT123");

@@ -47,4 +47,34 @@ public class DownloadDriver {
         return null;
     }
 
+
+    public WebDriver get(String drivers) {
+
+
+        switch (drivers) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                return new ChromeDriver(chromeOptions);
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                return new FirefoxDriver(firefoxOptions);
+            case "opera":
+                WebDriverManager.operadriver().setup();
+                OperaOptions operaOptions = new OperaOptions();
+                return new OperaDriver(operaOptions);
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                return new EdgeDriver(edgeOptions);
+            case "ie":
+                WebDriverManager.iedriver().setup();
+                InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+                return new InternetExplorerDriver(ieOptions);
+        }
+
+        return null;
+    }
+
 }

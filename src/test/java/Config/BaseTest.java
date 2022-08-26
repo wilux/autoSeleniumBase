@@ -1,12 +1,10 @@
 package Config;
 
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import Tools.DownloadDriver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 
 public abstract class BaseTest {
@@ -22,24 +20,23 @@ public abstract class BaseTest {
         driver = newDriver;
     }
 
-    @BeforeSuite
-    public void beforeAll() {
+    @Parameters("browser")
+    @BeforeClass
+    public void beforeAll(String browserName) {
 
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions chromeOptions = new ChromeOptions();
-        driver = new ChromeDriver(chromeOptions);
+        DownloadDriver downloadDriver = new DownloadDriver();
+        driver = downloadDriver.get(browserName);
         driver.manage().window().maximize();
-
 
     }
 
 
-    @AfterSuite
-    public void afterTest() {
-
+//    @AfterClass
+//    public void afterTest() {
+//
 //        if (driver != null) {
 //            driver.quit();
 //        }
-    }
+//    }
 
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -15,9 +15,12 @@ import java.time.Duration;
 public class ExampleTest extends ActionsImp {
     WebDriver driver;
 
-    @BeforeTest
-    public void beforeTests() {
-        driver = getDriver();
+    @AfterClass
+    public void afterTest() {
+
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @Test(priority = 1)
@@ -25,6 +28,7 @@ public class ExampleTest extends ActionsImp {
 
 
         //Go To
+        driver = getDriver();
         driver.get("https://sanbox.undostres.com.mx/");
 
 

@@ -1,0 +1,49 @@
+package Tools;
+
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
+
+public class DownloadDriver {
+
+
+    public WebDriver get(Drivers drivers) {
+
+
+        switch (drivers) {
+            case chromedriver:
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                return new ChromeDriver(chromeOptions);
+            case firefoxdriver:
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                return new FirefoxDriver(firefoxOptions);
+            case operadriver:
+                WebDriverManager.operadriver().setup();
+                OperaOptions operaOptions = new OperaOptions();
+                return new OperaDriver(operaOptions);
+            case edgedriver:
+                WebDriverManager.edgedriver().setup();
+                EdgeOptions edgeOptions = new EdgeOptions();
+                return new EdgeDriver(edgeOptions);
+            case iedriver:
+                WebDriverManager.iedriver().setup();
+                InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+                return new InternetExplorerDriver(ieOptions);
+        }
+
+        return null;
+    }
+
+}

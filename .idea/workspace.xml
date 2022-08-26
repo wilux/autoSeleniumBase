@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="add apirest rest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/FaceBookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCase/LeadSherpaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tools/Captcha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tools/Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tools/Mp3toText.java" afterDir="false" />
+    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="remove webbrowser local binaries">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Action/Click.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Click.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Get.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Get.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Action/Wait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Wait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Action/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Action/Write.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Config/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/RecaptchaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/RecaptchaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/FaceBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/FaceBookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/LeadSherpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/LeadSherpaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCase/LinkCheckTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tools/FindLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/FindLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tools/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/Frame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +78,7 @@
       <recent name="Action" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LeadSherpaTest">
+  <component name="RunManager" selected="TestNG.NuevoTest">
     <configuration name="FaceBookTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
@@ -138,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecaptchaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LeadSherpaTest.leadershipTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -147,15 +141,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.RecaptchaTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.LeadSherpaTest" />
+      <option name="METHOD_NAME" value="leadershipTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecaptchaTest.selectCorrectimg" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NuevoTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="autoSelenium" />
       <extension name="coverage">
         <pattern>
@@ -164,9 +159,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestCase" />
-      <option name="MAIN_CLASS_NAME" value="TestCase.RecaptchaTest" />
-      <option name="METHOD_NAME" value="selectCorrectimg" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="TestCase.NuevoTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -175,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LeadSherpaTest" />
-        <item itemvalue="TestNG.LeadSherpaTest.dragAndDropTest" />
-        <item itemvalue="TestNG.RecaptchaTest.selectCorrectimg" />
-        <item itemvalue="TestNG.RecaptchaTest" />
+        <item itemvalue="TestNG.NuevoTest" />
         <item itemvalue="TestNG.FaceBookTest.loginTest" />
+        <item itemvalue="TestNG.LeadSherpaTest" />
+        <item itemvalue="TestNG.LeadSherpaTest.leadershipTest" />
+        <item itemvalue="TestNG.LeadSherpaTest.dragAndDropTest" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659825267597</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add browser automatic download">
+      <created>1660419864380</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660419864380</updated>
+    </task>
+    <task id="LOCAL-00010" summary="remove webbrowser local binaries">
+      <created>1660419906526</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660419906526</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +279,8 @@
     <MESSAGE value="fix structure" />
     <MESSAGE value="add actions class to simplify call methods" />
     <MESSAGE value="add apirest rest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add apirest rest" />
+    <MESSAGE value="add browser automatic download" />
+    <MESSAGE value="remove webbrowser local binaries" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove webbrowser local binaries" />
   </component>
 </project>

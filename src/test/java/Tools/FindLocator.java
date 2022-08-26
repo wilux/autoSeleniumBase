@@ -3,6 +3,7 @@ package Tools;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 
@@ -10,14 +11,40 @@ import java.util.ArrayList;
 public class FindLocator {
     WebDriver driver;
 
+
     public FindLocator(WebDriver driver) {
 
         this.driver = driver;
 
+
+    }
+
+    public Boolean to(By locator) {
+
+        Frame frame = new Frame(driver);
+        WaitFor waitFor = new WaitFor(driver);
+        WebElement element = waitFor.explicitWaitOption(locator, 20);
+
+        try {
+            element.isDisplayed();
+            return true;
+        } catch (Exception e) {
+
+
+            if (frame.buscarFrame(locator)) {
+                System.out.println("Encontre iframe -> para  " + locator);
+                return true;
+            }
+            return false;
+
+        }
     }
 
 
     public By to(String locator) {
+
+        WaitFor waitFor = new WaitFor(driver);
+
 
         By valor = null;
         Frame frame = new Frame(driver);
@@ -33,8 +60,10 @@ public class FindLocator {
         for (int i = 0; i < x.size(); i++) {
 
             try {
+
                 driver.findElement(x.get(i)).isDisplayed();
                 valor = x.get(i);
+
                 break;
 
             } catch (Exception e) {
@@ -43,17 +72,18 @@ public class FindLocator {
 
         }
 
-        System.out.println("valor despues primer for -> " + valor);
+//        System.out.println("valor despues primer for -> " + valor);
 
         if (valor == null) {
-            System.out.println("Buscando en Frame -> " + locator);
+            System.out.println("Valor: " + valor + "entonces buscando en algun iframe el locator " + locator);
             for (int i = 0; i < x.size(); i++) {
 
                 try {
-                    if (frame.BuscarFrame(x.get(i))) {
-                        System.out.println("Encontre en Frame -> " + x.get(i));
+                    if (frame.buscarFrame(x.get(i))) {
+                        System.out.println("Encontre en iframe -> " + x.get(i) + " para valor " + locator);
                         driver.findElement(x.get(i)).isDisplayed();
                         valor = x.get(i);
+
                         break;
                     }
 
@@ -64,7 +94,9 @@ public class FindLocator {
             }
         }
 
-        System.out.println("valor encontrado -> " + valor);
+        System.out.println("valor final encontrado -> " + valor);
         return valor;
     }
+
+
 }

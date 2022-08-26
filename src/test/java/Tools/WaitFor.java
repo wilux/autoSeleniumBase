@@ -1,7 +1,6 @@
-package Action;
+package Tools;
 
 
-import Tools.FindLocator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -12,11 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Wait {
+public class WaitFor {
     WebDriver driver;
 
 
-    public Wait(WebDriver driver) {
+    public WaitFor(WebDriver driver) {
 
         this.driver = driver;
 
@@ -32,10 +31,8 @@ public class Wait {
 //    To remedy our buggy instruction set from earlier, we could employ a wait to have the findElement call wait until
 //    the dynamically added element from the script has been added to the DOM:
 
-    public WebElement explicitWait(String strLocator, int time) {
+    public WebElement explicitWait(By locator, int time) {
 
-        FindLocator findLocator = new FindLocator(driver);
-        By locator = findLocator.to(strLocator);
 
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(time))
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -47,10 +44,8 @@ public class Wait {
 //    The wait condition can be customised to match your needs. Sometimes it is unnecessary to wait the
 //    full extent of the default timeout, as the penalty for not hitting a successful condition can be expensive.
 
-    public WebElement explicitWaitOption(String strLocator, int time) {
+    public WebElement explicitWaitOption(By locator, int time) {
 
-        FindLocator findLocator = new FindLocator(driver);
-        By locator = findLocator.to(strLocator);
 
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(time)).
                 until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -64,21 +59,19 @@ public class Wait {
 //    Users may configure the wait to ignore specific types of exceptions whilst waiting,
 //    such as NoSuchElementException when searching for an element on the page.
 
-    public WebElement fluentWait(String strLocator, int timeOut, int timeEvery) {
+    public WebElement fluentWait(By locator, int timeOut, int timeEvery) {
 
-        FindLocator findLocator = new FindLocator(driver);
-        By locator = findLocator.to(strLocator);
 
         // Waiting 30 seconds for an element to be present on the page, checking
         // for its presence once every 5 seconds.
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+        FluentWait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(timeOut))
                 .pollingEvery(Duration.ofSeconds(timeEvery))
                 .ignoring(NoSuchElementException.class);
 
-        WebElement foo = wait.until(driver -> driver.findElement(locator));
+        WebElement element = wait.until(driver -> driver.findElement(locator));
 
-        return foo;
+        return element;
     }
 
 

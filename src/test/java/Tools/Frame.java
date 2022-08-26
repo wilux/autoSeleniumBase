@@ -1,6 +1,5 @@
 package Tools;
 
-import Config.BaseTest;
 import com.google.common.base.Stopwatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Frame extends BaseTest {
+public class Frame {
 
     WebDriver driver;
 
@@ -20,7 +19,7 @@ public class Frame extends BaseTest {
 
     }
 
-    public WebElement FindElementIfExists(By by) {
+    public WebElement findElementIfExists(By by) {
         WebElement element = null;
         final Stopwatch stopwatch = Stopwatch.createStarted();
         do {
@@ -39,11 +38,11 @@ public class Frame extends BaseTest {
     }
 
 
-    public Boolean BuscarFrame(By locator) {
+    public Boolean buscarFrame(By locator) {
         Boolean estado = false;
 
         System.out.println("Locator en frame " + locator);
-        if (FindElementIfExists(locator) != null) {
+        if (findElementIfExists(locator) != null) {
             estado = true;
         } else {
 

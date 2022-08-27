@@ -28,15 +28,15 @@ public class Example1Test extends ActionsImp {
         driver = getDriver();
 
         //Go To
-        driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/");
+        driver.get("https://www.google.com/");
 
         //Actions
-        click().on("//button[.='Customer Login']");
-        choose().byText("//select[@id='userSelect']", "Harry Potter");
-        click().on("//button[@class='btn btn-default']");
+        write().on("//input[@name='q']", "freelancersargentinos.com");
+        click().on("(//input[@aria-label='Buscar con Google'])[2]");
+        click().on("//h3[.='Freelancers Argentinos – Otro sitio realizado con WordPress']");
 
         //Assert
-        Assert.assertTrue(get().textOnTag("//span[@class='fontBig ng-binding']").contains("Harry Potter"));
+        Assert.assertTrue(get().textOnTag("//h1[.='Freelancers Argentinos']").contains("Freelancers Argentinos"));
 
 
     }

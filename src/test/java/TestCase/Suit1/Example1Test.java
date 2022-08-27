@@ -6,7 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import static Tools.ScreenRecorderUtil.startRecord;
+import static Tools.ScreenRecorderUtil.stopRecord;
 
 
 public class Example1Test extends ActionsImp {
@@ -21,8 +22,9 @@ public class Example1Test extends ActionsImp {
     }
 
     @Test(priority = 1)
-    public void SearchNameTest() throws IOException {
+    public void SearchNameTest() throws Exception {
 
+        startRecord("Test1");
 
         //Go To
         driver = getDriver();
@@ -34,7 +36,7 @@ public class Example1Test extends ActionsImp {
         click().on("//a[contains(.,'Ver Perfil')]");
         Assert.assertTrue(get().textOnTag(".fr-c-detail-box > p").equals("Nose"));
 
-
+        stopRecord();
     }
 
 

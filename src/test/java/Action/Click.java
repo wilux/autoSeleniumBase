@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.io.IOException;
 import java.time.Duration;
 
 public class Click {
@@ -35,19 +34,24 @@ public class Click {
         }
     }
 
-    public void on(String strLocator) throws IOException {
+    public void on(String strLocator) {
         WriteLogToFile writeLogToFile = new WriteLogToFile();
         FindLocator findLocator = new FindLocator(driver);
         By locator = findLocator.to(strLocator);
 
+        System.out.println(locator);
 
         if (locator != null) {
             try {
-                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(20))
+                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
                         .until(ExpectedConditions.elementToBeClickable(locator));
                 element.click();
                 writeLogToFile.write(strLocator);
-                driver.switchTo().parentFrame();
+                try {
+                    driver.switchTo().parentFrame();
+                } catch (Exception i) {
+                }
+                ;
             } catch (Exception e) {
                 System.out.println("No se encontró " + locator);
                 System.out.println("Reintentando paso anterior");
@@ -55,7 +59,7 @@ public class Click {
                     on(writeLogToFile.read());
                     on(strLocator);
                 } catch (Exception h) {
-                    System.out.println("No funciono paso panterior... saliendo");
+                    System.out.println("No funciono paso anterior... saliendo");
                     Assert.fail();
                 }
 

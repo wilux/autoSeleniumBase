@@ -43,8 +43,6 @@ public class FindLocator {
 
     public By to(String locator) {
 
-        WaitFor waitFor = new WaitFor(driver);
-
 
         By valor = null;
         Frame frame = new Frame(driver);
@@ -62,11 +60,13 @@ public class FindLocator {
             try {
 
                 if (driver.findElement(x.get(i)).isDisplayed() && driver.findElement(x.get(i)).isEnabled()) {
+                    System.out.println("Acertado con: " + x.get(i));
                     valor = x.get(i);
                     break;
                 }
 
             } catch (Exception e) {
+                System.out.println("Error con: " + x.get(i));
                 continue;
             }
 
@@ -74,7 +74,7 @@ public class FindLocator {
 
 //        System.out.println("valor despues primer for -> " + valor);
 
-        if (valor == null) {  // Si no encontro sigue buiscando en los posibles frames
+        if (valor == null && frame.sizeFrames() > 0) {  // Si no encontro y existen iframes
             System.out.println("Valor: " + valor + " entonces buscando en algun iframe el locator " + locator);
             for (int i = 0; i < x.size(); i++) {
 

@@ -2,12 +2,14 @@ package Action;
 
 import Tools.FindLocator;
 import Tools.WaitFor;
-import com.google.common.base.Stopwatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class Get {
     WebDriver driver;
@@ -72,18 +74,31 @@ public class Get {
 
         String value = "";
 
-        final Stopwatch stopwatch = Stopwatch.createStarted();
+//        final Stopwatch stopwatch = Stopwatch.createStarted();
+//
+//        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
+//            if (driver.findElement(locator).isDisplayed()) {
+//                value = driver.findElement(locator).getText();
+//                break;
+//            } else {
+//                System.out.println("No se encontró " + locator);
+//                continue;
+//            }
+//        }
+//        System.out.println(value);
 
-        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
-            if (driver.findElement(locator).isDisplayed()) {
-                value = driver.findElement(locator).getText();
-                break;
-            } else {
-                System.out.println("No se encontró " + locator);
-                continue;
-            }
+
+        WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            w.until(ExpectedConditions
+                    .visibilityOfElementLocated(locator));
+            // identify element
+            WebElement l = driver.findElement(locator);
+            // get text from element
+            value = l.getText();
+        } catch (Exception e) {
+            System.out.println("Element not available");
         }
-        System.out.println(value);
         return value;
     }
 

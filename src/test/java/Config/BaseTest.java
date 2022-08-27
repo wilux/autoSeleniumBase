@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import java.util.concurrent.TimeUnit;
+
 
 public abstract class BaseTest {
 
@@ -28,6 +30,7 @@ public abstract class BaseTest {
 
         DownloadDriver downloadDriver = new DownloadDriver();
         driver = downloadDriver.get(browserName);
+        driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize();
 
     }

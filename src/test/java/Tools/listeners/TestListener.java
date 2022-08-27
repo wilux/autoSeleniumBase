@@ -5,9 +5,11 @@ import Tools.extentreports.ExtentManager;
 import Tools.extentreports.ExtentTestManager;
 import Tools.logs.Log;
 import com.aventstack.extentreports.Status;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,7 +20,11 @@ import static Tools.extentreports.ExtentTestManager.getTest;
 public class TestListener implements ITestListener {
 
     private static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
+        Object testClass = iTestResult.getInstance();
+        WebDriver webDriver = ((BaseTest) testClass).getDriver();
+        Capabilities cap = ((RemoteWebDriver) webDriver).getCapabilities();
+        String browserName = cap.getBrowserName().toLowerCase();
+        return browserName + " - " + iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 
 

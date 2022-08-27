@@ -37,6 +37,9 @@ public class Frame {
         return element;
     }
 
+    public int sizeFrames() {
+        return driver.findElements(By.tagName("iframe")).size();
+    }
 
     public Boolean buscarFrame(By locator) {
 
@@ -54,6 +57,7 @@ public class Frame {
             //String frameI = FrameActual ();
             int sizeInicial = driver.findElements(By.tagName("iframe")).size();
             System.out.println("Cantidad frames: " + sizeInicial);
+
             for (int i = 0; i < sizeInicial; i++) {
 
                 try {
@@ -69,6 +73,7 @@ public class Frame {
                 }
 
             }
+
 
         }
 

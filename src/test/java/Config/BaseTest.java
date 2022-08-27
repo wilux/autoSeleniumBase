@@ -4,6 +4,7 @@ package Config;
 import Tools.DownloadDriver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 
@@ -22,7 +23,8 @@ public abstract class BaseTest {
 
     @Parameters("browser")
     @BeforeClass
-    public void beforeAll(String browserName) {
+    public void beforeAll(@Optional("chrome") String browserName) {
+
 
         DownloadDriver downloadDriver = new DownloadDriver();
         driver = downloadDriver.get(browserName);

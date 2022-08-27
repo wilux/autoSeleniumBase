@@ -39,32 +39,29 @@ public class Click {
         FindLocator findLocator = new FindLocator(driver);
         By locator = findLocator.to(strLocator);
 
-        System.out.println(locator);
-
-        if (locator != null) {
+        try {
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions.elementToBeClickable(locator));
+            element.click();
+            writeLogToFile.write(strLocator);
             try {
-                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
-                        .until(ExpectedConditions.elementToBeClickable(locator));
-                element.click();
-                writeLogToFile.write(strLocator);
-                try {
-                    driver.switchTo().parentFrame();
-                } catch (Exception i) {
-                }
-                ;
-            } catch (Exception e) {
-                System.out.println("No se encontró " + locator);
-                System.out.println("Reintentando paso anterior");
-                try {
-                    on(writeLogToFile.read());
-                    on(strLocator);
-                } catch (Exception h) {
-                    System.out.println("No funciono paso anterior... saliendo");
-                    Assert.fail();
-                }
-
+                driver.switchTo().parentFrame();
+            } catch (Exception i) {
             }
+
+        } catch (Exception e) {
+            System.out.println("No se encontró " + locator);
+            System.out.println("Reintentando paso anterior");
+            try {
+                on(writeLogToFile.read());
+                on(strLocator);
+            } catch (Exception h) {
+                System.out.println("No funciono paso anterior... saliendo");
+                Assert.fail();
+            }
+
         }
+
     }
 }
 

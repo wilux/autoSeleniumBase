@@ -3,6 +3,11 @@ package Action;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.time.Duration;
 
 public class Grid {
     WebDriver driver;
@@ -16,21 +21,26 @@ public class Grid {
     public void rowSelectbyText(By locator, String valor) {
 
 
-        if ( driver.findElement ( locator ).isDisplayed()) {
+        if (driver.findElement(locator).isDisplayed()) {
 
             try {
-                WebElement webElement = driver.findElement ( locator );
-                WebElement span = webElement.findElement ( By.xpath ( "//span[contains(text(),'" + valor + "')]" ) );
-                System.out.println ( "Encontre " + valor );
-                span.click ();
-                System.out.println ( "Seleccione " + valor );
+                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+                        .until(ExpectedConditions.elementToBeClickable(locator));
+
+
+                WebElement span = element.findElement(By.xpath("//span[contains(text(),'" + valor + "')]"));
+
+                span.click();
+
 
             } catch (Exception e) {
-                System.out.println ( "No encontre " + valor );
+                System.out.println("No encontre " + valor);
+                Assert.fail();
             }
-        }
-        else {
-            System.out.println ( "No se encontro " + locator + " - " + valor );
+        } else {
+
+            System.out.println("No se encontro " + locator + " - " + valor);
+            Assert.fail();
         }
 
     }
@@ -39,14 +49,14 @@ public class Grid {
     public void rowSelectbyFila(By locator, By fila) {
 
 
-        if (  driver.findElement ( locator ).isDisplayed()) {
+        if (driver.findElement(locator).isDisplayed()) {
 
             try {
-                WebElement webElement = driver.findElement ( locator );
-                webElement.findElement ( fila ).click ();
+                WebElement webElement = driver.findElement(locator);
+                webElement.findElement(fila).click();
 
             } catch (Exception e) {
-                System.out.println ( e );
+                System.out.println(e);
             }
         }
 

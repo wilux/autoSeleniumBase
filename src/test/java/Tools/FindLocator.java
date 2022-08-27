@@ -4,6 +4,7 @@ package Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.ArrayList;
 
@@ -92,6 +93,10 @@ public class FindLocator {
 
                 }
             }
+        }
+        if (valor == null) {
+            System.out.println("Locator " + valor + " para" + locator);
+            Assert.fail();
         }
 
         System.out.println("valor final encontrado -> " + valor);

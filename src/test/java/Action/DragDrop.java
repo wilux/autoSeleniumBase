@@ -6,6 +6,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class DragDrop {
     WebDriver driver;
@@ -19,32 +23,45 @@ public class DragDrop {
 
 
     //Drag and Drop normal option
-    public void fromAtoB(String strLocatorA, String strLocatorB) throws InterruptedException {
+    public void fromAtoB(String strLocatorA, String strLocatorB) {
 
-        Thread.sleep(200);
+
         FindLocator findLocator = new FindLocator(driver);
         By locatorA = findLocator.to(strLocatorA);
         By locatorB = findLocator.to(strLocatorB);
 
-        WebElement source = driver.findElement(locatorA);
-        WebElement target = driver.findElement(locatorB);
+        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(locatorA));
+        elementA.click();
+
+        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(locatorB));
+        elementB.click();
+
+        WebElement source = elementA;
+        WebElement target = elementB;
         // dragAndDrop() method for dragging the element from source to //destination
         Actions a = new Actions(driver);
-        Thread.sleep(1000);
         a.dragAndDrop(source, target).build().perform();
-        Thread.sleep(1000);
     }
 
     //drap and drop using javaScriptExecutor
-    public void fromAtoBjs(String strLocatorA, String strLocatorB) throws InterruptedException {
+    public void fromAtoBjs(String strLocatorA, String strLocatorB) {
 
-        Thread.sleep(200);
         FindLocator findLocator = new FindLocator(driver);
         By locatorA = findLocator.to(strLocatorA);
         By locatorB = findLocator.to(strLocatorB);
 
-        WebElement source = driver.findElement(locatorA);
-        WebElement target = driver.findElement(locatorB);
+        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(locatorA));
+        elementA.click();
+
+        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(locatorB));
+        elementB.click();
+
+        WebElement source = elementA;
+        WebElement target = elementB;
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("function createEvent(typeOfEvent) {\n" + "var event =document.createEvent(\"CustomEvent\");\n"
                 + "event.initCustomEvent(typeOfEvent,true, true, null);\n" + "event.dataTransfer = {\n" + "data: {},\n"

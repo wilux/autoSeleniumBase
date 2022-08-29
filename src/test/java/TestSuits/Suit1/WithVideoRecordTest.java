@@ -1,4 +1,4 @@
-package TestSuits.TestNGTest.Suit1;
+package TestSuits.Suit1;
 
 import Config.ActionsImp;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import static Tools.ScreenRecorderUtil.startRecord;
 import static Tools.ScreenRecorderUtil.stopRecord;
 
 
-public class ExampleTestWithVideoRecord extends ActionsImp {
+public class WithVideoRecordTest extends ActionsImp {
     WebDriver driver;
 
     @AfterClass
@@ -24,18 +24,24 @@ public class ExampleTestWithVideoRecord extends ActionsImp {
     @Test(priority = 1)
     public void SearchNameTest() throws Exception {
 
+        //Get Driver
+        driver = getDriver();
+
+        //Start record Video with name "Test1"
         startRecord("Test1");
 
-        //Go To
-        driver = getDriver();
+        //Go To Url
         driver.get("https://freelancersargentinos.com/");
 
-
+        //Actions
         write().on("[name='title']", "Nose");
         click().on("button.btn");
         click().on("//a[contains(.,'Ver Perfil')]");
-        Assert.assertTrue(get().textOnTag(".fr-c-detail-box > p").equals("Nose"));
 
+        //Assert
+        Assert.assertEquals(get().textOnTag(".fr-c-detail-box > p"), "Nose");
+
+        //Stop record video
         stopRecord();
     }
 

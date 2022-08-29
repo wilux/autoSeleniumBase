@@ -1,4 +1,4 @@
-package TestSuits.TestNGTest.Suit2;
+package Tests;
 
 import Config.ActionsImp;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class Example1Test extends ActionsImp {
+public class AloneExampleTest extends ActionsImp {
     WebDriver driver;
 
 

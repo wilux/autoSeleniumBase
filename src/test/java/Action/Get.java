@@ -47,6 +47,7 @@ public class Get {
     public String Url(String strLocator) {
         FindLocator findLocator = new FindLocator(driver);
 
+
         By locator = findLocator.to(strLocator);
 
         String value = "";
@@ -73,19 +74,6 @@ public class Get {
         By locator = findLocator.to(strLocator);
 
         String value = "";
-
-//        final Stopwatch stopwatch = Stopwatch.createStarted();
-//
-//        while ((stopwatch.elapsed(TimeUnit.SECONDS) < 10)) {
-//            if (driver.findElement(locator).isDisplayed()) {
-//                value = driver.findElement(locator).getText();
-//                break;
-//            } else {
-//                System.out.println("No se encontró " + locator);
-//                continue;
-//            }
-//        }
-//        System.out.println(value);
 
 
         WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(10));

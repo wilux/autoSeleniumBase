@@ -41,6 +41,16 @@ public class Keyboard {
         builder.sendKeys(Keys.RETURN).perform();
     }
 
+    public void pageDown() {
+        Actions builder = new Actions(driver);
+        builder.sendKeys(Keys.PAGE_DOWN).perform();
+    }
+
+    public void pageUp() {
+        Actions builder = new Actions(driver);
+        builder.sendKeys(Keys.PAGE_DOWN).perform();
+    }
+
     public void tab() {
         Actions builder = new Actions(driver);
         builder.sendKeys(Keys.TAB).perform();

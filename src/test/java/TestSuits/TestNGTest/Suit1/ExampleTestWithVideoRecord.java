@@ -1,4 +1,4 @@
-package TestCase.Suit1;
+package TestSuits.TestNGTest.Suit1;
 
 import Config.ActionsImp;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import static Tools.ScreenRecorderUtil.startRecord;
 import static Tools.ScreenRecorderUtil.stopRecord;
 
 
-public class Example1Test extends ActionsImp {
+public class ExampleTestWithVideoRecord extends ActionsImp {
     WebDriver driver;
 
     @AfterClass

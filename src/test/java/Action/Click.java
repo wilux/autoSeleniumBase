@@ -40,7 +40,7 @@ public class Click {
         By locator = findLocator.to(strLocator);
 
         try {
-            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3))
                     .until(ExpectedConditions.elementToBeClickable(locator));
             element.click();
             writeLogToFile.write(strLocator);

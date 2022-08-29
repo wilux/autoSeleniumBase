@@ -1,4 +1,4 @@
-package TestCase;
+package TestSuits;
 
 import Config.ActionsImp;
 import org.openqa.selenium.WebDriver;

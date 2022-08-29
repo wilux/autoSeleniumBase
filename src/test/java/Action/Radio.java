@@ -44,7 +44,7 @@ public class Radio {
         By locator = findLocator.to(strLocator);
 
         if (locator != null) {
-            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+            WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3))
                     .until(ExpectedConditions.elementToBeClickable(locator));
 
             if (driver.findElement(locator).isDisplayed()) {

@@ -31,7 +31,7 @@ public class WaitFor {
 //    To remedy our buggy instruction set from earlier, we could employ a wait to have the findElement call wait until
 //    the dynamically added element from the script has been added to the DOM:
 
-    public WebElement explicitWait(By locator, int time) {
+    public WebElement explicitWait(By locator, long time) {
 
 
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(time))
@@ -44,7 +44,7 @@ public class WaitFor {
 //    The wait condition can be customised to match your needs. Sometimes it is unnecessary to wait the
 //    full extent of the default timeout, as the penalty for not hitting a successful condition can be expensive.
 
-    public WebElement explicitWaitOption(By locator, int time) {
+    public WebElement explicitWaitOption(By locator, long time) {
 
 
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(time)).
@@ -59,7 +59,7 @@ public class WaitFor {
 //    Users may configure the wait to ignore specific types of exceptions whilst waiting,
 //    such as NoSuchElementException when searching for an element on the page.
 
-    public WebElement fluentWait(By locator, int timeOut, int timeEvery) {
+    public WebElement fluentWait(By locator, long timeOut, int timeEvery) {
 
 
         // Waiting 30 seconds for an element to be present on the page, checking

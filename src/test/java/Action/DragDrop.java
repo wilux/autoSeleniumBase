@@ -30,11 +30,11 @@ public class DragDrop {
         By locatorA = findLocator.to(strLocatorA);
         By locatorB = findLocator.to(strLocatorB);
 
-        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(5))
+        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.elementToBeClickable(locatorA));
         elementA.click();
 
-        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(5))
+        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.elementToBeClickable(locatorB));
         elementB.click();
 
@@ -52,11 +52,11 @@ public class DragDrop {
         By locatorA = findLocator.to(strLocatorA);
         By locatorB = findLocator.to(strLocatorB);
 
-        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(5))
+        WebElement elementA = new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.elementToBeClickable(locatorA));
         elementA.click();
 
-        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(5))
+        WebElement elementB = new WebDriverWait(driver, Duration.ofSeconds(3))
                 .until(ExpectedConditions.elementToBeClickable(locatorB));
         elementB.click();
 

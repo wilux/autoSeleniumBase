@@ -1,4 +1,4 @@
-package TestCase.Suit2;
+package TestSuits.TestNGTest.Suit2;
 
 import Config.ActionsImp;
 import org.openqa.selenium.WebDriver;
@@ -16,9 +16,9 @@ public class Example1Test extends ActionsImp {
     @AfterClass
     public void afterTest() {
 
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @Test(priority = 1)

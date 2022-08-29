@@ -24,7 +24,7 @@ public class Grid {
         if (driver.findElement(locator).isDisplayed()) {
 
             try {
-                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(5))
+                WebElement element = new WebDriverWait(driver, Duration.ofSeconds(3))
                         .until(ExpectedConditions.elementToBeClickable(locator));
 
 

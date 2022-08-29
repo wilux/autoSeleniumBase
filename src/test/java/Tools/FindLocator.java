@@ -4,9 +4,9 @@ package Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 
 public class FindLocator {
@@ -44,6 +44,21 @@ public class FindLocator {
 
     public By to(String locator) {
 
+        By valor = find(locator);
+
+        if (valor == null) {
+            System.out.println("Locator " + locator + " No encontrado en primer vuelta");
+            System.out.println("Reintenando...");
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            valor = find(locator);
+        }
+
+        System.out.println("valor final encontrado -> " + valor);
+        driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
+        return valor;
+    }
+
+    private By find(String locator) {
 
         By valor = null;
         Frame frame = new Frame(driver);
@@ -94,12 +109,6 @@ public class FindLocator {
                 }
             }
         }
-        if (valor == null) {
-            System.out.println("Locator " + valor + " para" + locator);
-            Assert.fail();
-        }
-
-        System.out.println("valor final encontrado -> " + valor);
         return valor;
     }
 

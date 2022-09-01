@@ -91,7 +91,6 @@ Graba un video de la prueba y guarda en test-recordings
 
 # Video
 
-<video src='[https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)' width=180/>
 
 [![Demo CountPages alpha](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)
 

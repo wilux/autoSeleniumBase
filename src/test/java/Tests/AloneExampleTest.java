@@ -23,7 +23,7 @@ public class AloneExampleTest extends ActionsImp {
         }
     }
 
-    @Test(priority = 1)
+    @Test
     public void SearchNameTest() throws IOException {
 
         //Get Driver

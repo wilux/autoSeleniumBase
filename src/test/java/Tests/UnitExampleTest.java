@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class UnitExampleTest {
 
-    @Test(priority = 1)
+    @Test
     public void AloneCodeTest() {
 
         int n = 15;

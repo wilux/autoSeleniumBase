@@ -86,12 +86,15 @@ Busca locator de forma recursiva en todos los frames de una página.
 
 ## ScreenRecorder 
 Graba un video de la prueba y guarda en test-recordings
+
 ![image](https://user-images.githubusercontent.com/850505/187944048-d7abf001-d7de-4142-85d4-7038f8acb084.png)
 
-# Video 
+# Video
+
 <video src='[https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)' width=180/>
 
 [![Demo CountPages alpha](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)](https://user-images.githubusercontent.com/850505/187945264-43d6a4b3-e292-4d99-93d3-99df7e1ede88.mp4)
+
 
 # src/test/
 

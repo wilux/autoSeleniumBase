@@ -2,11 +2,15 @@
 
 ## El template cuenta con varios paquetes y clases de ejemplo
 
+Estoy utilizando IntelliJ Community Edition como IDE, Maven y Java 18
+
 ## La estructura es la siguiente:
 
 src/test/java
 
 ### Config
+![image](https://user-images.githubusercontent.com/850505/187938402-0a9336bb-def2-4aeb-bc1c-0a2fc305e1e2.png)
+
 
 Cuenta con clases relacionadas con la configuración.
 
@@ -18,18 +22,24 @@ Cuenta con clases relacionadas con la configuración.
 
 ### Actions
 
+![image](https://user-images.githubusercontent.com/850505/187938322-79d20f45-fe6b-40dd-9b0b-9f6aeea19057.png)
+
+
 Consta de clases con acciones predefinidas para lograr la acción determinada con agregados para reducir código a la hora
 de escribir el test. No es obligatorio su uso.
 
 ### Tests
 
-Es para escribir test aislados. Cada Clase representa un Test. Un test podría contener varios test en una misma clase
+Es para escribir test aislados (Fuera de una suit). Cada Clase representa un Test. Un test podría contener varios test en una misma clase
 interelacionados.
 
 ### TestSuits
 
 Es para ordenar Test en Suits. Una Suit esta conformada por un archivo XML de TestNG el cual se configura para correr
 todos los test deseados de la suit. Podría ser para multiples browsers, de forma paralela, etc.
+
+![image](https://user-images.githubusercontent.com/850505/187941281-20f24f10-0311-4634-9ace-f1c8e04ff343.png)
+
 
 ### Tools
 

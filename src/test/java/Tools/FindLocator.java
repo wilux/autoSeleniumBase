@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 
@@ -44,17 +45,29 @@ public class FindLocator {
 
     public By to(String locator) {
 
-        By valor = find(locator);
+        By valor = null;
 
-        if (valor == null) {
-            System.out.println("Locator " + locator + " No encontrado en primer vuelta");
-            System.out.println("Reintenando...");
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-            valor = find(locator);
+        valor = find(locator);
+
+        if (Objects.isNull(valor)) {
+            System.out.println("Estoy por reintentar con valor -> " + valor);
+
+            for (int i = 3; i < 8; i++) {
+
+                System.out.println("Locator " + locator + " No encontrado en primer vuelta");
+                System.out.println(i + " Reintento...");
+                driver.manage().timeouts().implicitlyWait(i * 100, TimeUnit.MILLISECONDS);
+                valor = find(locator);
+                if (!Objects.isNull(valor)) {
+                    System.out.println("Valor final encontrado -> " + valor);
+                    driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
+                    break;
+                }
+            }
+
         }
-
-        System.out.println("valor final encontrado -> " + valor);
         driver.manage().timeouts().implicitlyWait(200, TimeUnit.MILLISECONDS);
+        System.out.println("Valor final devuelto -> " + valor);
         return valor;
     }
 

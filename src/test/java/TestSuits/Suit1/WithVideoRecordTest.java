@@ -9,7 +9,10 @@ import org.testng.annotations.Test;
 import static Tools.ScreenRecorderUtil.startRecord;
 import static Tools.ScreenRecorderUtil.stopRecord;
 
-
+/*
+ *  Here Example Test in Suit with Video Record and Automatic Locator Search for clicks, write, etc.
+ *  You can configure and run Suit1.xml for run all test of suit
+ * */
 public class WithVideoRecordTest extends ActionsImp {
     WebDriver driver;
 

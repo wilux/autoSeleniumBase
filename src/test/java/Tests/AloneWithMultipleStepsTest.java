@@ -11,7 +11,10 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.time.Duration;
 
-
+/*
+ *  Here Example Multiple Tests with Automatic Locator Search for clicks, write, etc.
+ *  Each Test is related in class.
+ * */
 public class AloneWithMultipleStepsTest extends ActionsImp {
     WebDriver driver;
 

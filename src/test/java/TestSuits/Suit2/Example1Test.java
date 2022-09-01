@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
+/*
+ *  Here Example Test in Suit with Automatic Locator Search for clicks, write, etc.
+ *  You can configure and run Suit1.xml for run all test of suit
+ * */
 public class Example1Test extends ActionsImp {
     WebDriver driver;
 

@@ -8,7 +8,9 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
+/*
+ *  Here Example Alone test with Automatic Locator Search for clicks, write, etc.
+ * */
 public class AloneExampleTest extends ActionsImp {
     WebDriver driver;
 

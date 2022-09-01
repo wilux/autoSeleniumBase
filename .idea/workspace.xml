@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="remove webbrowser local binaries">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit3/pages/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit3/pages/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit3/testCases/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/UnitExampleTest.java" afterDir="false" />
+    <list default="true" id="06768e35-374d-4d51-8011-df98879ca8df" name="Changes" comment="fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit2/Suit2-MultiBrowsersParallel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSuits/Suit1/Suit1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit1/Suit1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSuits/Suit1/WithVideoRecordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit1/WithVideoRecordTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSuits/Suit2/Example1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit2/Example1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSuits/Suit2/Suit2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSuits/Suit3/Suit3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AloneExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AloneExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/AloneWithMultipleStepsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/AloneWithMultipleStepsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tools/FindLocator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tools/FindLocator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660419906526</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixes">
+      <created>1662032785863</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662032785863</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +275,7 @@
     <MESSAGE value="add apirest rest" />
     <MESSAGE value="add browser automatic download" />
     <MESSAGE value="remove webbrowser local binaries" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove webbrowser local binaries" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>
